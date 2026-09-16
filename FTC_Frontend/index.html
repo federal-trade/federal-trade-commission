@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Federal Trade Commission</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app-shell">
+      <header class="site-header">
+        <div class="topbar">
+          <div class="container topbar-inner">
+            <div class="topbar-left">
+              <span class="meta-tag">An official website of the United States government</span>
+            </div>
+            <div class="topbar-actions">
+              <button class="secondary-btn">Report Fraud</button>
+              <button class="secondary-btn">Report Product Complaints</button>
+              <button class="secondary-btn">Search the Legal Library</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="main-header">
+          <div class="container header-inner">
+            <div class="brand-area">
+              <div class="brand-mark">
+                <img src="logo.png" alt="FTC Logo" />
+              </div>
+              <div class="brand-copy">
+                <div class="brand-name">FEDERAL TRADE COMMISSION</div>
+                <div class="brand-subtitle">PROTECTING AMERICA'S CONSUMERS</div>
+              </div>
+            </div>
+
+            <nav class="main-nav" aria-label="Main navigation">
+              <a href="#">Enforcement</a>
+              <a href="#">Policy</a>
+              <a href="#">Advice and Guidance</a>
+              <a href="#">News &amp; Events</a>
+              <a href="#">About the FTC</a>
+            </nav>
+
+            <button id="openLoginBtn" class="login-btn">Login</button>
+          </div>
+        </div>
+      </header>
+
+      <main id="publicView" class="page-shell">
+        <section class="hero-section">
+          <div class="hero-overlay"></div>
+          <div class="container hero-content">
+            <div class="hero-copy-block">
+              <h1 id="heroTitle">COPPA: What You Should Know</h1>
+              <p id="heroText">The Children's Online Privacy Protection Act (COPPA) helps parents control what information websites and online services can collect from their kids.</p>
+              <a href="#" class="primary-link">Learn more about COPPA</a>
+            </div>
+
+            <div class="hero-aside">
+              <div class="alert-panel">
+                <h3>Recognize in FTC impersonator scams</h3>
+                <p>Scammers are impersonating the FTC. The FTC will never threaten you, say you must transfer money to “protect it,” or tell you to withdraw cash or buy gold and give it to someone. That's a scam.</p>
+                <button class="primary-action">Report to the FTC</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="action-strip">
+          <div class="container action-inner">
+            <div class="action-item">
+              <span class="icon-dot"></span>
+              <span>Report fraud</span>
+            </div>
+            <div class="action-item">
+              <span class="icon-dot"></span>
+              <span>Report fake products</span>
+            </div>
+            <div class="action-item">
+              <span class="icon-dot"></span>
+              <span>Report identity theft</span>
+            </div>
+            <div class="action-item">
+              <span class="icon-dot"></span>
+              <span>Register to Do Not Call</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="info-cards-section">
+          <div class="container card-grid" id="infoCards"></div>
+        </section>
+
+        <section class="signup-bar">
+          <div class="container signup-inner">
+            <h2>Sign up to get e-mail updates.</h2>
+            <div class="badge">Stay connected</div>
+            <div class="social-row">
+              <span>f</span>
+              <span>x</span>
+              <span>in</span>
+              <span>◉</span>
+              <span>▶</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="news-section">
+          <div class="container news-wrap">
+            <h2>News and Updates</h2>
+            <div class="news-grid">
+              <div class="news-column" id="pressReleases"></div>
+              <div class="news-column" id="businessBlog"></div>
+              <div class="news-column" id="openMeetings"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <section id="dashboardView" class="dashboard-view hidden" aria-live="polite">
+        <div class="dashboard-header">
+          <div class="container dashboard-inner">
+            <div>
+              <p class="eyebrow">Secure access</p>
+              <h2>Safeguard Wallet</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="container dashboard-shell">
+          <aside class="wallet-sidebar">
+            <div class="profile-box">
+              <div class="avatar">AB</div>
+              <div>
+                <p class="label">Account holder</p>
+                <h3 id="accountName">Ava Brown</h3>
+              </div>
+            </div>
+
+            <div class="account-box">
+              <p class="label">Account number</p>
+              <h4 id="accountNumber">SAGE-2045-0912</h4>
+            </div>
+
+            <ul class="nav-links">
+              <li class="active">Overview</li>
+              <li>Transfer</li>
+              <li>Cards</li>
+              <li>Statements</li>
+              <li>Security</li>
+            </ul>
+          </aside>
+
+          <div class="wallet-main">
+            <div class="balance-card">
+              <div class="balance-row">
+                <div>
+                  <p class="label">Available balance</p>
+                  <h3 id="balanceValue">$42,650.76</h3>
+                </div>
+                <button id="toggleBalance" class="eye-btn" type="button" aria-label="Toggle balance">👁</button>
+              </div>
+              <div class="mini-metrics">
+                <div>
+                  <span>Incoming</span>
+                  <strong id="incomingAmount">$12,450.00</strong>
+                </div>
+                <div>
+                  <span>Outgoing</span>
+                  <strong id="outgoingAmount">$8,220.15</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="transactions-card">
+              <div class="section-head">
+                <h3>Recent transactions</h3>
+                <button class="filter-btn">This month</button>
+              </div>
+              <div class="transaction-list" id="transactionList"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <div class="footer-links-wrapper">
+          <div class="container footer-grid">
+            <div class="footer-column">
+              <h4>Enforcement</h4>
+              <ul>
+                <li>Cases and Proceedings</li>
+                <li>Premerger Notification</li>
+                <li>Merger Review</li>
+                <li>Anticompetitive Practices</li>
+                <li>Antitrust Litigation</li>
+                <li>Competition and Consumer Protection Documents</li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h4>Policy</h4>
+              <ul>
+                <li>Advocacy and Research</li>
+                <li>Advisory Opinions</li>
+                <li>Competition and Consumer Policy</li>
+                <li>Federal Register Notices</li>
+                <li>Reports</li>
+                <li>Public Comments</li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h4>Advice and Guidance</h4>
+              <ul>
+                <li>Consumer Advice</li>
+                <li>Privacy and Security</li>
+                <li>Consumer Education</li>
+                <li>Business Guidance</li>
+                <li>Publications</li>
+                <li>Data Security</li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h4>News and Events</h4>
+              <ul>
+                <li>News</li>
+                <li>Events</li>
+                <li>Speeches</li>
+                <li>Open Meetings</li>
+                <li>Public Hearings</li>
+                <li>Press Releases</li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h4>About the FTC</h4>
+              <ul>
+                <li>Mission</li>
+                <li>History</li>
+                <li>Commissioners</li>
+                <li>Budget and Strategic Plan</li>
+                <li>Office of Inspector General</li>
+                <li>Careers</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bar">
+          <div class="container footer-bar-inner">
+            <div class="legal-links">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Policy and Notices</a>
+              <a href="#">Accessibility</a>
+              <a href="#">FOIA</a>
+              <a href="#">No Fear Act</a>
+              <a href="#">Office of Inspector General</a>
+              <a href="#">USA.gov</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <div id="loginModal" class="modal-overlay hidden" aria-modal="true" role="dialog">
+      <div class="modal-box">
+        <button type="button" id="closeLoginBtn" class="close-modal" aria-label="Close login form">×</button>
+        <h3>Secure login</h3>
+        <form id="loginForm">
+          <label>
+            User ID
+            <input id="userIdInput" type="text" placeholder="Enter user id" required />
+          </label>
+          <label>
+            Password
+            <input id="passwordInput" type="password" placeholder="Enter password" required />
+          </label>
+          <button type="submit" class="primary-action wide-btn">Login</button>
+          <p id="loginError" class="error-text hidden">Invalid user ID or password.</p>
+        </form>
+      </div>
+    </div>
+
+    <script id="site-data" type="application/json">
+      {
+        "site": {
+          "heroTitle": "COPPA: What You Should Know",
+          "heroText": "The Children's Online Privacy Protection Act (COPPA) helps parents control what information websites and online services can collect from their kids.",
+          "cards": [
+            {
+              "title": "Buying a Used Car",
+              "copy": "Need to buy a used car soon? Get information about buyers' guides, payment options, warranties and more in our consumer-focused guide.",
+              "image": "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=900&q=80"
+            },
+            {
+              "title": "Our Refund Process",
+              "copy": "Wondering how we get settlement money to consumers? Learn the six steps involved in every refund program.",
+              "image": "https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=900&q=80"
+            },
+            {
+              "title": "Banned Debt Collectors",
+              "copy": "View a list of the companies and people permanently banned from the debt collection business in the U.S.",
+              "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=80"
+            }
+          ],
+          "pressReleases": [
+            {
+              "title": "FTC Publishes Proposed 2027 Budget for Horse Racing Integrity and Safety Authority",
+              "date": "September 30, 2028",
+              "button": "All press releases"
+            },
+            {
+              "title": "Data Visualization",
+              "date": "",
+              "button": "Explore data"
+            }
+          ],
+          "businessBlog": [
+            {
+              "title": "Announcing the Bureau of Consumer Protection's New Guidance Program",
+              "date": "September 30, 2026",
+              "tag": "Consumer Alerts",
+              "summary": "Was your intimate image shared online without your consent? Here's what to do"
+            },
+            {
+              "title": "This National Preparedness Month, plan ahead to avoid scams",
+              "date": "September 30, 2026",
+              "tag": "BCP Staff",
+              "summary": ""
+            }
+          ],
+          "openMeetings": [
+            {
+              "title": "FTC open meetings",
+              "text": "Track enforcement and policy developments by viewing records from the Commission's open meetings—agendas, transcripts, videos, reports, and public comments.",
+              "button": "Open Meetings archive"
+            }
+          ]
+        },
+        "accounts": [
+          {
+            "userId": "demo@ftc.gov",
+            "password": "admin123",
+            "name": "Ava Brown",
+            "accountNumber": "SAGE-2045-0912",
+            "balance": 42650.76,
+            "incoming": 12450.0,
+            "outgoing": 8220.15,
+            "transactions": [
+              { "date": "2026-09-03", "title": "FTC Refund Received", "amount": 1250.0, "type": "credit", "status": "Completed" },
+              { "date": "2026-08-28", "title": "Fraud Alert Review", "amount": -480.0, "type": "debit", "status": "Pending" },
+              { "date": "2026-08-22", "title": "Consumer Protection Transfer", "amount": 3200.0, "type": "credit", "status": "Completed" },
+              { "date": "2026-08-17", "title": "Secure Document Fee", "amount": -240.0, "type": "debit", "status": "Completed" },
+              { "date": "2026-08-10", "title": "Settlement Disbursement", "amount": 4500.0, "type": "credit", "status": "Completed" },
+              { "date": "2026-08-03", "title": "Identity Review Service", "amount": -310.0, "type": "debit", "status": "Completed" }
+            ]
+          },
+          {
+            "userId": "maria@ftc.gov",
+            "password": "secure456",
+            "name": "Maria Chen",
+            "accountNumber": "SAGE-7781-0419",
+            "balance": 18240.35,
+            "incoming": 6440.0,
+            "outgoing": 5105.42,
+            "transactions": [
+              { "date": "2026-09-11", "title": "Consumer Education Refund", "amount": 980.0, "type": "credit", "status": "Completed" },
+              { "date": "2026-09-01", "title": "Compliance Review", "amount": -260.0, "type": "debit", "status": "Completed" },
+              { "date": "2026-08-24", "title": "Fraud Prevention Bonus", "amount": 2350.0, "type": "credit", "status": "Completed" },
+              { "date": "2026-08-18", "title": "Identity Check", "amount": -130.0, "type": "debit", "status": "Completed" },
+              { "date": "2026-08-09", "title": "Settlement Advance", "amount": 3100.0, "type": "credit", "status": "Completed" }
+            ]
+          },
+          {
+            "userId": "daniel@ftc.gov",
+            "password": "daniel789",
+            "name": "Daniel Ortiz",
+            "accountNumber": "SAGE-9904-2217",
+            "balance": 29450.1,
+            "incoming": 9840.0,
+            "outgoing": 6400.2,
+            "transactions": [
+              { "date": "2026-09-07", "title": "Case Review Deposit", "amount": 1750.0, "type": "credit", "status": "Completed" },
+              { "date": "2026-08-30", "title": "Document Handling Fee", "amount": -220.0, "type": "debit", "status": "Completed" },
+              { "date": "2026-08-21", "title": "Recovered Funds", "amount": 4450.0, "type": "credit", "status": "Completed" },
+              { "date": "2026-08-16", "title": "Security Renewal", "amount": -340.0, "type": "debit", "status": "Pending" },
+              { "date": "2026-08-03", "title": "Quarterly Payment", "amount": 5600.0, "type": "credit", "status": "Completed" }
+            ]
+          }
+        ]
+      }
+    </script>
+
+    <script src="app.js"></script>
+  </body>
+</html>
