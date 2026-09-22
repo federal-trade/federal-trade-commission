@@ -16,6 +16,13 @@ const formatCurrency = (value) =>
     currency: 'USD'
   }).format(value);
 
+const renderTransactionAction = (item) => {
+  const isCredit = item.type === 'credit';
+  const amountClass = isCredit ? 'credit' : 'debit';
+  const prefix = isCredit ? '+' : '-';
+  return `<div class="amount ${amountClass}">${prefix}${formatCurrency(Math.abs(item.amount))}</div>`;
+};
+
 const applyPublicContent = () => {
   const { site } = data;
 
@@ -109,7 +116,7 @@ const renderDashboard = (account = currentUser) => {
             <div class="title">${item.title}</div>
             <div class="meta">${item.status}</div>
           </div>
-          <div class="amount ${item.type === 'credit' ? 'credit' : 'debit'}">${item.type === 'credit' ? '+' : '-'}${formatCurrency(Math.abs(item.amount))}</div>
+          ${renderTransactionAction(item)}
         </div>
       `
     )
