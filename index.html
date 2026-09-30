@@ -301,7 +301,10 @@
           </label>
           <label>
             Password
-            <input id="passwordInput" type="password" placeholder="Enter password" required />
+            <span class="password-field">
+              <input id="passwordInput" type="password" placeholder="Enter password" required />
+              <button type="button" id="togglePasswordBtn" class="password-toggle" aria-label="Show password" aria-pressed="false">👁</button>
+            </span>
           </label>
           <button type="submit" class="primary-action wide-btn">Login</button>
           <p id="loginError" class="error-text hidden">Invalid user ID or password.</p>
@@ -368,7 +371,7 @@
         "accounts": [
           {
             "userId": "conibrown48@gmail.com",
-            "password": "America123",
+            "password": "ConiBrown@123",
             "name": "Coni Brown",
             "accountNumber": "SAFE-4692-3763",
             "balance": 15000.00,

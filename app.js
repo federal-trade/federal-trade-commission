@@ -7,6 +7,8 @@ const loginError = document.getElementById('loginError');
 const openLoginBtn = document.getElementById('openLoginBtn');
 const closeLoginBtn = document.getElementById('closeLoginBtn');
 const toggleBalanceBtn = document.getElementById('toggleBalance');
+const passwordInput = document.getElementById('passwordInput');
+const togglePasswordBtn = document.getElementById('togglePasswordBtn');
 let isLoggedIn = false;
 let currentUser = null;
 
@@ -163,6 +165,10 @@ const openLogin = () => {
 const closeLogin = () => {
   loginModal.classList.add('hidden');
   document.body.style.overflow = 'auto';
+  passwordInput.type = 'password';
+  togglePasswordBtn.textContent = '👁';
+  togglePasswordBtn.setAttribute('aria-label', 'Show password');
+  togglePasswordBtn.setAttribute('aria-pressed', 'false');
 };
 
 const attemptLogin = (event) => {
@@ -198,10 +204,19 @@ const toggleBalance = () => {
   toggleBalanceBtn.textContent = balanceVisible ? '👁' : '🙈';
 };
 
+const togglePassword = () => {
+  const isVisible = passwordInput.type === 'text';
+  passwordInput.type = isVisible ? 'password' : 'text';
+  togglePasswordBtn.textContent = isVisible ? '👁' : '🙈';
+  togglePasswordBtn.setAttribute('aria-label', isVisible ? 'Show password' : 'Hide password');
+  togglePasswordBtn.setAttribute('aria-pressed', String(!isVisible));
+};
+
 openLoginBtn.addEventListener('click', openLogin);
 closeLoginBtn.addEventListener('click', closeLogin);
 loginForm.addEventListener('submit', attemptLogin);
 toggleBalanceBtn.addEventListener('click', toggleBalance);
+togglePasswordBtn.addEventListener('click', togglePassword);
 
 applyPublicContent();
 updateAuthButton();
